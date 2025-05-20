@@ -57,14 +57,16 @@ public class Tarea {
         this.estado = estado;
     }
 
+    public void marcarComoCompletada() {
+        this.estado = true;
+    }
+
     @Override
     public String toString() {
-        return "Tarea{" +
-                "id=" + id +
-                ", titulo='" + titulo + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", fechaLimite='" + fechaLimite + '\'' +
-                ", estado=" + estado +
-                '}';
+        return "ID: " + id +
+                " | Título: " + titulo +
+                " | Descripción: " + descripcion +
+                " | Fecha límite: " + fechaLimite +
+                " | Estado: " + (estado ? "Completada" : "Pendiente");
     }
 }
